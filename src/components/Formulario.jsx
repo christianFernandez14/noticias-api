@@ -14,7 +14,7 @@ const CATEGORIAS = [
 
 const Formulario = () => {
 
-  const {categoria, handleChangeCategoria} = useNoticias()
+  const { categoria, handleChangeCategoria, noticias } = useNoticias()
 
   return (
     <form>
