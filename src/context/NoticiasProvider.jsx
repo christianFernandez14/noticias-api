@@ -8,27 +8,27 @@ const NoticiasProvider = ({ children }) => {
 
   const [categoria, setCategoria] = useState('general')
   const [noticias, setNoticias] = useState([])
+  const [pagina, setPagina] = useState(1)
+  const [totalNoticias, setTotalNoticias] = useState(0)
 
   useEffect(() => {
-    const consultarApi = async () => {
-      
+    const consultarApi = async () => {      
       try {        
         const apiKey = import.meta.env.VITE_API_KEY
         const URL = `https://newsapi.org/v2/top-headlines?country=us&category=${categoria}&apiKey=${apiKey}`
   
         const { data } = await axios(URL)
+        const {articles, totalResults} = data
   
-        // console.log(data.articles)
-        setNoticias(data.articles)
+        // console.log(data)
+        setNoticias(articles)
+        setTotalNoticias(totalResults)
 
       } catch (error) {
         console.log(error)
       }
-
-
     }
     consultarApi()
-
   }, [categoria])
 
   const handleChangeCategoria = e => {

@@ -1,5 +1,5 @@
 import Noticia from "./Noticia";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Pagination, Stack } from "@mui/material";
 import useNoticias from "../hooks/useNoticias";
 
 const ListadoNoticias = () => {
@@ -25,6 +25,20 @@ const ListadoNoticias = () => {
           />
         ))}
       </Grid>
+
+      <Stack
+        sx={{marginY: 5}}
+        spacing={2}
+        direction={'row'}
+        justifyContent={'center'}
+        alignItems={'center'}
+      >
+        <Pagination
+          count={10}
+          // variant="outlined"
+          color="primary"
+        />
+      </Stack>
 
     </>
   )
