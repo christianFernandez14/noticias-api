@@ -1,8 +1,12 @@
-# React + Vite
+PROYECTO DE NOTICIAS (Buscador de Noticias).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Stack: Vite + ContexApi + frond (Material UI - framework de React)
 
-Currently, two official plugins are available:
+Que veremos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  => Cosumir info desde una API (Usaremos Axios como dependencia).
+  => Seguimos con ContexApi
+  => Paginación desde el frond con React
+ 
+
+
