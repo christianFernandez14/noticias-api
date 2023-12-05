@@ -1,10 +1,12 @@
 import Formulario from "./components/Formulario";
+import ListadoNoticias from "./components/ListadoNoticias";
 import { NoticiasProvider } from "./context/NoticiasProvider";
 import { Container, Grid, Typography } from "@mui/material";
 function App() {
 
   return (
     <NoticiasProvider>
+
       <Container>
         <header>
           <Typography
@@ -33,7 +35,11 @@ function App() {
             <Formulario />
           </Grid>
         </Grid>
+
+        <ListadoNoticias />
+
       </Container>
+      
     </NoticiasProvider>
   )
 }
