@@ -4,7 +4,11 @@ import useNoticias from "../hooks/useNoticias";
 
 const ListadoNoticias = () => {
 
-  const { noticias } = useNoticias();
+  const { noticias, totalNoticias } = useNoticias();
+
+  const totalPaginas = Math.ceil(totalNoticias / 20)
+
+  // console.log(totalNoticias, 'cantidad de paginas: ', totalPaginas);
 
   return (
     <>
@@ -27,14 +31,14 @@ const ListadoNoticias = () => {
       </Grid>
 
       <Stack
-        sx={{marginY: 5}}
+        sx={{ marginY: 5 }}
         spacing={2}
         direction={'row'}
         justifyContent={'center'}
         alignItems={'center'}
       >
         <Pagination
-          count={10}
+          count={totalPaginas}
           // variant="outlined"
           color="primary"
         />
