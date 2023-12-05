@@ -14,7 +14,7 @@ const NoticiasProvider = ({ children }) => {
       
       try {        
         const apiKey = import.meta.env.VITE_API_KEY
-        const URL = `https://newsapi.org/v2/top-headlines?country=ve&category=${categoria}&apiKey=${apiKey}`
+        const URL = `https://newsapi.org/v2/top-headlines?country=us&category=${categoria}&apiKey=${apiKey}`
   
         const { data } = await axios(URL)
   
