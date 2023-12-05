@@ -4,7 +4,7 @@ import useNoticias from "../hooks/useNoticias";
 
 const ListadoNoticias = () => {
 
-  const { noticias, totalNoticias } = useNoticias();
+  const { noticias, totalNoticias, handleChangePagina, pagina } = useNoticias();
 
   const totalPaginas = Math.ceil(totalNoticias / 20)
 
@@ -41,6 +41,8 @@ const ListadoNoticias = () => {
           count={totalPaginas}
           // variant="outlined"
           color="primary"
+          onChange={handleChangePagina}
+          page={pagina}
         />
       </Stack>
 
